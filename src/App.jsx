@@ -1,17 +1,17 @@
-import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-// Pages
+// pages
 import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Update from "./pages/Update";
 
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
       <nav>
         <h1>Supa Smoothies</h1>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/create">Create New Smoothies</NavLink>
+        <Link to="/">Home</Link>
+        <Link to="/create">Create New Smoothie</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,6 +20,6 @@ const App = () => {
       </Routes>
     </BrowserRouter>
   );
-};
+}
 
 export default App;
